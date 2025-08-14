@@ -59,5 +59,8 @@ TagManager:
   - name: Deco
     uniqueID: 454685161
     locked: 0
+  - name: FX
+    uniqueID: 1391588587
+    locked: 0
   m_RenderingLayers:
   - Default
