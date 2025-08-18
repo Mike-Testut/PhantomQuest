@@ -9,12 +9,13 @@ public class MapTransition : MonoBehaviour
     private CinemachineConfiner2D confiner;
     private Transform player;
 
-    private PolygonCollider2D currentArea;
+    [SerializeField] private PolygonCollider2D currentArea;
     
     private void Awake()
     {
         confiner = FindFirstObjectByType<CinemachineConfiner2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        confiner.BoundingShape2D = currentArea;
         
         if (forrest1Boundary == null)
         {
@@ -29,8 +30,7 @@ public class MapTransition : MonoBehaviour
             if (cemetary1 != null)
                 cemetary1Boundary = cemetary1.GetComponent<PolygonCollider2D>();
         }
-
-        currentArea = cemetary1Boundary;
+        
     }
     
 
